@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
+    <script>
+      const input = document.getElementById("file-upload");
+      const progress = document.querySelector(".file-upload-bar");
+
+      input.addEventListener("change", () => {
+        progress.style.width = "100%";
+      });
+    </script>
   </head>
   <body>
     <div class="file-upload-container">
@@ -16,7 +24,10 @@
             Choose a file
           </label>
         </div>
-        <input type="submit" value="Upload" />
+        <div class="file-upload-progress">
+          <div class="file-upload-bar"></div>
+        </div>
+        <input type="submit" value="Upload" class="file-upload-submit" />
       </form>
     </div>
   </body>
